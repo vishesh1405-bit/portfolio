@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	const navLinks = document.querySelectorAll('.nav-link');
 	const sections = document.querySelectorAll('main section[id], .hero');
 	const revealItems = document.querySelectorAll('.reveal');
-	const form = document.querySelector('#contact-form');
-	const status = document.querySelector('.form-status');
 	const typedTitle = document.querySelector('.typed-title');
 
 	const updateHeader = () => header.classList.toggle('scrolled', window.scrollY > 30);
@@ -63,11 +61,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	};
 	window.setTimeout(typeTitle, 1800);
 
-	form.addEventListener('submit', (event) => {
-		event.preventDefault();
-		status.textContent = 'Thanks, your message is ready to be received. I will be in touch soon.';
-		form.reset();
-	});
-
-	document.querySelectorAll('a[href="#"]').forEach((link) => link.addEventListener('click', (event) => event.preventDefault()));
 });
